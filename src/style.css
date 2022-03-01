@@ -26,6 +26,10 @@ ul {
   padding: 0;
 }
 
+#description {
+  text-transform: capitalize;
+}
+
 li {
   list-style: none;
   margin: 0;
