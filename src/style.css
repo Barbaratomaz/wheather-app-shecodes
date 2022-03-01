@@ -76,3 +76,27 @@ li {
 a {
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(32, 33, 36);
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.weather-forecast-temperature-max {
+  color: rgb(32, 33, 36);
+}
+
+.weather-forecast-temperature-min {
+  color: rgb(112, 117, 122);
+}
