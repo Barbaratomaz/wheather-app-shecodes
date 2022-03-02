@@ -16,12 +16,62 @@
     <link rel="stylesheet" href="src/style.css" />
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/bc74e1fdc6.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="search-form" class="mb-3" action="">
+          <!-- START -->
+          <div class="row d-flex justify-content-between mb-5">
+            <div class="col-3">
+              <h6 class="header-pretitle">Today, 17 jan</h6>
+              <h3 class="header-title" id="header-title">Good Morning,</h3>
+            </div>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+              <div
+                class="nav my-3 my-xl-0 d-flex align-items-center flex-nowrap"
+              >
+                <!-- <div class="search-location nav-item w-100 search"> -->
+                <form
+                  class="position-relative search-location nav-item"
+                  id="search-form"
+                >
+                  <input
+                    class="input-search w-auto form-control pe-5 bg-transparent"
+                    id="city-input"
+                    type="search"
+                    placeholder="Search location"
+                    aria-label="Search"
+                    autocomplete="additional-name"
+                  />
+                  <button
+                    class="cta btn bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y"
+                    id="search-input"
+                    type="submit"
+                  >
+                    <i class="fas fa-search fs-6"></i>
+                  </button>
+                </form>
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- END -->
+
+          <!-- <form id="search-form" class="mb-3" action="">
             <div class="row">
               <div class="col-9">
                 <input
@@ -40,7 +90,7 @@
                 />
               </div>
             </div>
-          </form>
+          </form> -->
           <div class="overview">
             <h1 id="city"></h1>
             <ul>
@@ -50,7 +100,9 @@
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="clearfix weather-temperature">
+              <div
+                class="clearfix d-flex align-items-center weather-temperature"
+              >
                 <img src="" alt="" id="icon" class="float-left" width="200" />
                 <span class="float-left">
                   <strong id="temperature"></strong>
@@ -58,10 +110,18 @@
                 </span>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-6 d-flex align-items-center">
               <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span>km/h</li>
+                <li class="mb-3">
+                  Humidity<br />
+                  <span id="humidity" class="humidity-unit"></span
+                  ><span class="humidity-unit">%</span>
+                </li>
+                <li>
+                  Wind<br />
+                  <span id="wind" class="wind-unit"></span
+                  ><span class="wind-unit">km/h</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -72,7 +132,7 @@
                 <img
                   src="https://openweathermap.org/img/wn/04d@2x.png"
                   alt=""
-                  width="64"
+                  width="120"
                 />
                 <div class="weather-forecast-temperatures">
                   <span class="weather-forecast-temperature-max">18°</span>

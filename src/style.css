@@ -1,9 +1,9 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 1200px;
   margin: 30px auto;
 }
 
@@ -11,6 +11,37 @@ body {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+}
+
+.search-location {
+  margin: 0 16px;
+  width: 100%;
+}
+
+.input-search {
+  border-radius: 25px;
+  border-color: #ff7a52;
+}
+
+.cta {
+  border-radius: 25px;
+  font-size: 14px;
+  /*display: block;*/
+  color: black;
+  opacity: 0.6;
+}
+
+h3 {
+  margin: 0;
+}
+
+.header-pretitle {
+  opacity: 0.6;
+}
+
+#icon {
+  width: 200px;
+  height: 200px;
 }
 
 h1 {
@@ -36,8 +67,22 @@ li {
   padding: 0;
   color: #878787;
   font-size: 16px;
-  font-weight: 100;
+  font-weight: 500;
   line-height: 19px;
+}
+
+li .humidity-unit {
+  font-size: 24px;
+  color: black;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+li .wind-unit {
+  font-size: 24px;
+  color: black;
+  font-weight: 500;
+  line-height: 34px;
 }
 
 .overview {
@@ -53,15 +98,16 @@ li {
 
 .weather-temperature strong {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 100px;
   font-weight: 400;
   line-height: 1;
 }
 
 .weather-temperature .units {
   position: relative;
-  font-size: 16px;
-  top: -34px;
+  font-size: 24px;
+  font-weight: 500;
+  top: -54px;
 }
 
 .weather-temperature .active {
@@ -84,17 +130,20 @@ a {
 
 .weather-forecast-date {
   font-size: 16px;
-  font-weight: 400;
-  color: rgb(32, 33, 36);
+  font-weight: 700;
+  color: rgb(112, 117, 122);
+  margin-top: 10px;
+  opacity: 0.6;
 }
 
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 32px;
   font-weight: 400;
 }
 
 .weather-forecast-temperature-max {
   color: rgb(32, 33, 36);
+  margin-right: 10px;
 }
 
 .weather-forecast-temperature-min {
