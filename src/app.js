@@ -129,3 +129,20 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("New York");
+
+//
+//
+//
+let now = new Date();
+
+let h3 = document.querySelector("#header-title");
+let time = now.getHours();
+if (time < 12) {
+  h3.innerHTML = `Good Morning`;
+} else if (time >= 12 && time <= 17) {
+  h3.innerHTML = `Good Afternoon`;
+} else if (time >= 17 && time <= 24) {
+  h3.innerHTML = `Good Evening`;
+}
+
+//
