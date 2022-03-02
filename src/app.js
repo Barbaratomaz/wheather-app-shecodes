@@ -48,7 +48,7 @@ function displayForecast(response) {
                 }@2x.png"
                 alt=""
                 width="94"
-                />
+                class="temperature-img"/>
             <div class="weather-forecast-temperatures">
                 <span class="weather-forecast-temperature-max">${Math.round(
                   forecastDay.temp.max
@@ -104,7 +104,7 @@ function displayTemperature(response) {
   let icon = response.data.weather[0].icon;
   iconElement.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${icon}@2x.png`
+    `https://openweathermap.org/img/wn/${icon}@4x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 

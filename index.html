@@ -36,7 +36,7 @@
           <!-- START -->
           <div class="row d-flex justify-content-between mb-5">
             <div class="col-3">
-              <h6 class="header-pretitle">Today, 17 jan</h6>
+              <h6 class="header-pretitle" id="date">Today, 17 jan</h6>
               <h3 class="header-title" id="header-title">Good Morning,</h3>
             </div>
             <div class="col-6 d-flex align-items-center justify-content-end">
@@ -49,7 +49,7 @@
                   id="search-form"
                 >
                   <input
-                    class="input-search w-auto form-control pe-5 bg-transparent"
+                    class="input-search w-auto form-control pe-5 bg-transparent text-light"
                     id="city-input"
                     type="search"
                     placeholder="Search location"
@@ -91,15 +91,11 @@
               </div>
             </div>
           </form> -->
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li id="date"></li>
-              <li id="description"></li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
+
+          <!-- Temperature and City START-->
+
+          <div class="row middle-section">
+            <div class="col-4">
               <div
                 class="clearfix d-flex align-items-center weather-temperature"
               >
@@ -110,21 +106,55 @@
                 </span>
               </div>
             </div>
-            <div class="col-6 d-flex align-items-center">
+            <div class="col-2 d-flex justify-content-start flex-column">
+              <!-- HUMIDITY START-->
+              <div class="d-flex mb-4 humidity-bg">
+                <div class="d-inline align-self-start icon-m">
+                  <i class="fas fa-umbrella"></i>
+                </div>
+                <div class="d-inline align-self-start">
+                  <span class="d-block humidity-title">Humidity</span>
+                  <span class="d-block">
+                    <span id="humidity" class="humidity-unit"></span
+                    ><span class="humidity-unit">%</span>
+                  </span>
+                </div>
+              </div>
+              <!-- HUMIDITY START-->
+              <!-- WIND START-->
+              <div class="d-flex mb-4 wind-bg">
+                <div class="d-inline align-self-start icon-m">
+                  <i class="fas fa-wind"></i>
+                </div>
+                <div class="d-inline align-self-start">
+                  <span class="d-block wind-title">Wind</span>
+                  <span class="d-block">
+                    <span id="wind" class="wind-unit"></span
+                    ><span class="wind-unit">km/h</span>
+                  </span>
+                </div>
+              </div>
+              <!-- WIND END-->
+            </div>
+            <div class="col-6 d-flex justify-content-end flex-column overview">
               <ul>
-                <li class="mb-3">
-                  Humidity<br />
-                  <span id="humidity" class="humidity-unit"></span
-                  ><span class="humidity-unit">%</span>
-                </li>
+                <li><h1 id="city" class="mb-5"></h1></li>
                 <li>
-                  Wind<br />
-                  <span id="wind" class="wind-unit"></span
-                  ><span class="wind-unit">km/h</span>
+                  <span
+                    class="description-cont p-2 ps-3 pe-3 bd-highlight"
+                    id="description"
+                  ></span>
                 </li>
               </ul>
+              <!--<ul>
+                <li id="date"></li>
+                <li></li>
+              </ul>-->
             </div>
           </div>
+
+          <!-- Temperature and City END-->
+
           <div class="weather-forecast" id="forecast">
             <div class="row">
               <div class="col-2">
@@ -142,15 +172,27 @@
             </div>
           </div>
         </div>
-        <small>
+        <!--<small class="footer">
           <a
             href="https://github.com/Barbaratomaz/wheather-app-shecodes"
             target="_blank"
             >Open-source code</a
           >, by Barbara Tomaz.
-        </small>
+        </small>-->
       </div>
     </div>
+
+    <footer class="bg-light text-center text-lg-start footer">
+      <!-- Copyright -->
+      <div class="text-center p-3 footer-bg">
+        <a
+          class="text-link"
+          href="https://github.com/Barbaratomaz/wheather-app-shecodes"
+          >Open-source code</a
+        >, by Barbara Tomaz.
+      </div>
+      <!-- Copyright -->
+    </footer>
 
     <script src="src/app.js"></script>
   </body>
